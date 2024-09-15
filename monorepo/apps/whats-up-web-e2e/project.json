@@ -1,0 +1,9 @@
+{
+  "name": "whats-up-web-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/whats-up-web-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["whats-up-web"],
+  "// targets": "to see all targets run: nx show project whats-up-web-e2e --web",
+  "targets": {}
+}
