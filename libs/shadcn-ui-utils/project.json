@@ -1,0 +1,9 @@
+{
+  "name": "shadcn-ui-utils",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shadcn-ui-utils/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project shadcn-ui-utils --web",
+  "targets": {}
+}
