@@ -1,12 +1,12 @@
 {
-  "name": "shadcn-ui",
+  "name": "shadcn-ui-web",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/shadcn-ui/src",
+  "sourceRoot": "libs/shadcn-ui-web/src",
   "projectType": "library",
   "tags": [],
   "targets": {
     "add-component": {
-      "executor": "@nx-extend/shadcn-ui:add"
+      "command": "npx shadcn@latest add"
     }
   }
 }

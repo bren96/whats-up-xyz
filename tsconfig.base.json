@@ -15,11 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "api-client": ["libs/api-client/src/index.ts"],
-      "shadcn-ui": ["libs/shadcn-ui/src/index.ts"],
-      "shadcn-ui/*": ["libs/shadcn-ui/src/*"],
-      "shadcn-ui-utils": ["libs/shadcn-ui-utils/src/index.ts"],
-      "shadcn-ui-utils/*": ["libs/shadcn-ui-utils/src/*"]
+      "@libs/api-client": ["libs/api-client/src/index.ts"],
+      "@libs/shadcn-ui-web": ["libs/shadcn-ui-web/src/index.ts"],
+      "@libs/shadcn-ui-web/*": ["libs/shadcn-ui-web/src/*"],
+      "@libs/shadcn-ui-utils": ["libs/shadcn-ui-utils/src/index.ts"],
+      "@libs/shadcn-ui-utils/*": ["libs/shadcn-ui-utils/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
