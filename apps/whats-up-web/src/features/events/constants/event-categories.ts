@@ -1,35 +1,32 @@
-interface Category {
-  label: string;
-  emoji: string;
-}
+import { Category } from '../types/category';
 
 export const EVENT_CATEGORIES: Category[] = [
   {
     label: 'art',
-    emoji: '🎵',
+    emoji: '🎨',
   },
   {
     label: 'community',
-    emoji: '',
+    emoji: '📢',
   },
   {
     label: 'dance',
-    emoji: '',
+    emoji: '💃',
   },
   {
     label: 'drinks',
-    emoji: '',
+    emoji: '🍺',
   },
   {
     label: 'food',
-    emoji: '',
+    emoji: '🍌',
   },
   {
     label: 'music',
-    emoji: '',
+    emoji: '🎵',
   },
   {
     label: 'workshops',
-    emoji: '',
+    emoji: '🛠️',
   },
 ] as const;

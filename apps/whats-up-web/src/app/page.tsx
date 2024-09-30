@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <div className="h-full flex flex-col">
       <NavBar />
-      <div className="p-2 grow bg-indigo-50">
+      <div className="p-2 grow bg-violet-50">
         <SearchBar />
         <SearchCategoryList />
         <Separator />
