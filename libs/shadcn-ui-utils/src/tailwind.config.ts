@@ -13,6 +13,7 @@ export function buildConfig(appDir: string): Config {
       ),
       ...createGlobPatternsForDependencies(appDir),
     ],
+    darkMode: 'selector',
     theme: {
       extend: {
         colors: {
