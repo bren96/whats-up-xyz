@@ -11,6 +11,7 @@ export const MOCK_EVENTS: Event[] = [
     startDateTime: '2024-10-01T10:00:00',
     endDateTime: '2024-10-01T18:00:00',
     categories: ['art'],
+    address: '123 Main St, Downtown',
   },
   {
     id: '2',
@@ -22,6 +23,7 @@ export const MOCK_EVENTS: Event[] = [
     startDateTime: '2024-10-05T08:00:00',
     endDateTime: '2024-10-05T12:00:00',
     categories: ['community'],
+    address: '456 Park Ave, Green City',
   },
   {
     id: '3',
@@ -32,6 +34,7 @@ export const MOCK_EVENTS: Event[] = [
     startDateTime: '2024-10-07T19:00:00',
     endDateTime: '2024-10-07T23:00:00',
     categories: ['music', 'drinks'],
+    address: '789 Music St, Jazz District',
   },
   {
     id: '4',
@@ -43,6 +46,7 @@ export const MOCK_EVENTS: Event[] = [
     startDateTime: '2024-10-10T17:00:00',
     endDateTime: '2024-10-10T19:00:00',
     categories: ['dance', 'workshops'],
+    address: '123 Rhythm Ln, Dance City',
   },
   {
     id: '5',
@@ -54,6 +58,7 @@ export const MOCK_EVENTS: Event[] = [
     startDateTime: '2024-10-03T09:00:00',
     endDateTime: '2024-10-03T14:00:00',
     categories: ['food'],
+    address: '321 Market St, Central Plaza',
   },
   {
     id: '6',
@@ -65,6 +70,7 @@ export const MOCK_EVENTS: Event[] = [
     startDateTime: '2024-10-15T10:00:00',
     endDateTime: '2024-10-15T12:00:00',
     categories: ['art', 'workshops'],
+    address: '654 Brush St, Art District',
   },
   {
     id: '7',
@@ -75,6 +81,7 @@ export const MOCK_EVENTS: Event[] = [
     startDateTime: '2024-10-12T18:00:00',
     endDateTime: '2024-10-12T21:00:00',
     categories: ['drinks'],
+    address: '987 Brewery Ave, Beer Town',
   },
   {
     id: '8',
@@ -86,6 +93,7 @@ export const MOCK_EVENTS: Event[] = [
     startDateTime: '2024-10-20T15:00:00',
     endDateTime: '2024-10-20T18:00:00',
     categories: ['dance'],
+    address: '345 Beat St, Urban District',
   },
   {
     id: '9',
@@ -97,6 +105,7 @@ export const MOCK_EVENTS: Event[] = [
     startDateTime: '2024-10-08T12:00:00',
     endDateTime: '2024-10-08T15:00:00',
     categories: ['music', 'community'],
+    address: '456 Park Ave, Central Park',
   },
   {
     id: '10',
@@ -107,5 +116,6 @@ export const MOCK_EVENTS: Event[] = [
     startDateTime: '2024-10-17T18:30:00',
     endDateTime: '2024-10-17T21:30:00',
     categories: ['food'],
+    address: '789 Gourmet Rd, Food District',
   },
 ];

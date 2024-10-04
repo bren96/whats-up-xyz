@@ -1,4 +1,4 @@
-import { EventCategory } from "../types/event-category"
+import { EventCategory } from '../types/event-category';
 
 export interface Event {
   id: string;
@@ -8,5 +8,6 @@ export interface Event {
   link: string;
   startDateTime: string;
   endDateTime: string;
+  address: string;
   categories: EventCategory[];
 }

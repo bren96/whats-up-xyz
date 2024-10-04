@@ -10,17 +10,20 @@ import { Event } from '../types/event';
 
 interface EventProps {
   event: Event;
+  className?: string;
 }
 
-export function EventCard({ event }: EventProps) {
+export function EventCard({ event, className }: EventProps) {
   return (
-    <Card>
+    <Card className={className}>
       <CardHeader>
         <CardTitle>{event.title}</CardTitle>
         <CardDescription>{event.description}</CardDescription>
       </CardHeader>
       <CardContent>
-        <p>Card Content</p>
+        {Object.values(event).map((value) => {
+          return <p key={value}>{value}</p>;
+        })}
       </CardContent>
       <CardFooter>
         <p>Card Footer</p>

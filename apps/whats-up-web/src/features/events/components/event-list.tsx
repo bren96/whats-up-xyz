@@ -8,7 +8,7 @@ function getEvents() {
 export function EventList() {
   const events = getEvents();
   return (
-    <div>
+    <div className="flex flex-col gap-y-4 p-4 overflow-scroll">
       {events.map((event) => (
         <EventCard key={event.id} event={event} />
       ))}
