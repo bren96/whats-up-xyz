@@ -7,6 +7,9 @@ import {
   CardTitle,
 } from '@libs/shadcn-ui-web';
 import { Event } from '../types/event';
+import { EventCategories } from './event-categories';
+import { EventLocation } from './event-location';
+import { EventTime } from './event-time';
 
 interface EventProps {
   event: Event;
@@ -18,15 +21,15 @@ export function EventCard({ event, className }: EventProps) {
     <Card className={className}>
       <CardHeader>
         <CardTitle>{event.title}</CardTitle>
-        <CardDescription>{event.description}</CardDescription>
+        <CardDescription>{event.organization}</CardDescription>
       </CardHeader>
       <CardContent>
-        {Object.values(event).map((value) => {
-          return <p key={value}>{value}</p>;
-        })}
+        <p>{event.description}</p>
       </CardContent>
-      <CardFooter>
-        <p>Card Footer</p>
+      <CardFooter className="flex flex-col items-end gap-y-2 text-lg">
+        <EventTime event={event} />
+        <EventLocation event={event} />
+        <EventCategories event={event} />
       </CardFooter>
     </Card>
   );
