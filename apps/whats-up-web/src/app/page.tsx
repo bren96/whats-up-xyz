@@ -6,9 +6,9 @@ import { EventList } from '../features/events/components/event-list';
 
 export default function Page() {
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-full flex flex-col bg-violet-50">
       <NavBar />
-      <div className="p-2 grow bg-violet-50">
+      <div className="p-4 grow">
         <SearchBar />
         <SearchCategoryList />
         <Separator />

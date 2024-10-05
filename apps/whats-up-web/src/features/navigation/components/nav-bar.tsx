@@ -1,8 +1,11 @@
+import { NavBarLocation } from './nav-bar-location';
+import { NavBarTitle } from './nav-bar-title';
+
 export function NavBar() {
   return (
-    <div className="bg-white">
-      <h1 className="text-3xl">Whats Up!</h1>
-      <h2 className="text-2xl">Ithaca, NY</h2>
+    <div className="flex items-center justify-between p-2 bg-white border-b">
+      <NavBarTitle />
+      <NavBarLocation />
     </div>
   );
 }
