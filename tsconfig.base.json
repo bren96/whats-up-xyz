@@ -16,10 +16,11 @@
     "baseUrl": ".",
     "paths": {
       "@libs/api-client": ["libs/api-client/src/index.ts"],
+      "@libs/shadcn-ui-utils": ["libs/shadcn-ui-utils/src/index.ts"],
+      "@libs/shadcn-ui-utils/*": ["libs/shadcn-ui-utils/src/*"],
       "@libs/shadcn-ui-web": ["libs/shadcn-ui-web/src/index.ts"],
       "@libs/shadcn-ui-web/*": ["libs/shadcn-ui-web/src/*"],
-      "@libs/shadcn-ui-utils": ["libs/shadcn-ui-utils/src/index.ts"],
-      "@libs/shadcn-ui-utils/*": ["libs/shadcn-ui-utils/src/*"]
+      "@libs/whats-up-prisma": ["libs/whats-up-prisma/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model event_tag {
+  id    Int     @id @default(autoincrement())
+  label String?
+  emoji String?
+  events event[] @relation("EventTags")
+}
+
+model event {
+  id Int @id @default(autoincrement())
+  tagIds Int[]
+  tags event_tag[] @relation("EventTags")
+}

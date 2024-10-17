@@ -1,8 +1,8 @@
 import { SearchBar } from '../features/search/components/search-bar';
-import { SearchCategoryList } from '../features/search/components/search-category-list';
 import { NavBar } from '../features/navigation/components/nav-bar';
 import { Separator } from '@libs/shadcn-ui-web';
 import { EventList } from '../features/events/components/event-list';
+import { SearchCategoryList } from '../features/search/components/search-category-list';
 
 export default function Page() {
   return (
