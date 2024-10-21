@@ -1,19 +1,11 @@
-import { SearchBar } from '../features/search/components/search-bar';
-import { NavBar } from '../features/navigation/components/nav-bar';
-import { Separator } from '@libs/shadcn-ui-web';
-import { EventList } from '../features/events/components/event-list';
-import { SearchCategoryList } from '../features/search/components/search-category-list';
+'use server';
 
-export default function Page() {
-  return (
-    <div className="h-full flex flex-col bg-violet-50">
-      <NavBar />
-      <div className="p-4 grow">
-        <SearchBar />
-        <SearchCategoryList />
-        <Separator />
-        <EventList />
-      </div>
-    </div>
-  );
+import { prisma } from '@libs/whats-up-prisma';
+import { SearchPage } from '../features/search/pages/search-page';
+import { MOCK_EVENTS } from '../features/events/mocks/events';
+
+export default async function Page() {
+  const tags = await prisma.event_tag.findMany();
+  const events = MOCK_EVENTS;
+  return <SearchPage tags={tags} events={events} />;
 }

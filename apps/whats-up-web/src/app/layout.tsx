@@ -1,4 +1,5 @@
 import './global.css';
+import { NavBar } from '../features/navigation/components/nav-bar';
 
 export const metadata = {
   title: 'Welcome to whats-up-web',
@@ -12,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="h-full flex flex-col bg-violet-50">
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,12 +1,11 @@
 import { EventCard } from './event-card';
-import { MOCK_EVENTS } from '../mocks/events';
+import { Event } from '../types/event';
 
-function getEvents() {
-  return MOCK_EVENTS;
+export interface EventListProps {
+  events: Event[];
 }
 
-export function EventList() {
-  const events = getEvents();
+export function EventList({ events }: EventListProps) {
   return (
     <div className="flex flex-col gap-y-4 p-4 overflow-scroll">
       {events.map((event) => (
