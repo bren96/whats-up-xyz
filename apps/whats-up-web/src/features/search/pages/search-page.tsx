@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from 'react';
 import { Separator } from '@libs/shadcn-ui-web';
-import { SearchBar } from '../components/search-bar';
 import { SearchCategoryList } from '../components/search-category-list';
 import { SearchEventList } from '../components/search-event-list';
 import { EventTag } from '../../events/types/event-tag';
@@ -24,7 +23,7 @@ export function SearchPage({ tags, events }: SearchPageProps) {
 
   return (
     <div className="p-4 grow">
-      <SearchBar />
+      {/* TODO <SearchBar /> */}
       <SearchCategoryList tags={tags} onValueChange={setSelectedTagIds} />
       <Separator />
       <SearchEventList events={events} selectedTags={selectedTags} />
