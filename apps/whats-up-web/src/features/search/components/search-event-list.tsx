@@ -13,8 +13,8 @@ export function SearchEventList({
   const filteredEvents =
     selectedTags.length > 0
       ? events.filter((event) =>
-          event.categories
-            .map((c) => selectedTags.map((t) => t.label).includes(c))
+          event.tags
+            .map((tag) => selectedTags.map((t) => t.label).includes(tag.label))
             .includes(true)
         )
       : events;

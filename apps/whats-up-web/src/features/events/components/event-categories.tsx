@@ -8,9 +8,9 @@ interface EventCategoriesProps {
 export function EventCategories({ event }: EventCategoriesProps) {
   return (
     <div className="flex gap-x-2 text-violet-600 font-mono">
-      {event.categories.map((category) => (
-        <p className="text-sm text-right" key={category}>
-          #{category}
+      {event.tags.map((tag) => (
+        <p className="text-sm text-right" key={tag.id}>
+          #{tag.label}
         </p>
       ))}
       <Tags className="w-5 h-5" />

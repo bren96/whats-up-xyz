@@ -18,4 +18,11 @@ model event {
   id Int @id @default(autoincrement())
   tagIds Int[]
   tags event_tag[] @relation("EventTags")
+  title String
+  description String
+  organization String
+  link String
+  startDateTime String
+  endDateTime String
+  address String
 }
