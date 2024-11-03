@@ -16,7 +16,6 @@ model event_tag {
 
 model event {
   id Int @id @default(autoincrement())
-  tagIds Int[]
   tags event_tag[] @relation("EventTags")
   title String
   description String
