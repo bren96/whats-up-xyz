@@ -14,12 +14,10 @@ export function SearchEventList({
     selectedTags.length > 0
       ? events.filter((event) =>
           event.tags
-            .map((tag) => selectedTags.map((t) => t.label).includes(tag.label))
+            .map((tag) => selectedTags.map((t) => t.id).includes(tag.id))
             .includes(true)
         )
       : events;
-
-  console.log({ filteredEvents, selectedTags });
 
   return <EventList events={filteredEvents} />;
 }
