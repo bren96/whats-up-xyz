@@ -25,3 +25,16 @@ model event {
   endDateTime String
   address String
 }
+
+model email {
+  id         Int      @id @default(autoincrement())
+  rawText    String
+  receivedAt DateTime @default(now())
+  status     Status   @default(IN_PROGRESS)
+}
+
+enum Status {
+  IN_PROGRESS
+  SUCCESS
+  ERROR
+}
