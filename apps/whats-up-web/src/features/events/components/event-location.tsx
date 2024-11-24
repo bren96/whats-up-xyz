@@ -1,5 +1,5 @@
 import { MapPinIcon } from 'lucide-react';
-import { Event } from '../types/event';
+import { Event } from '@libs/whats-up-events';
 
 interface EventLocationProps {
   event: Event;

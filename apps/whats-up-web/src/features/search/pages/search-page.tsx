@@ -4,8 +4,7 @@ import { useMemo, useState } from 'react';
 import { Separator } from '@libs/shadcn-ui-web';
 import { SearchCategoryList } from '../components/search-category-list';
 import { SearchEventList } from '../components/search-event-list';
-import { EventTag } from '../../events/types/event-tag';
-import { Event } from '../../events/types/event';
+import { Event, EventTag } from '@libs/whats-up-events';
 
 interface SearchPageProps {
   tags: EventTag[];

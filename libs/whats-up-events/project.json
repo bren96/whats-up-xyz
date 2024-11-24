@@ -1,0 +1,19 @@
+{
+  "name": "whats-up-events",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/whats-up-events/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/whats-up-events",
+        "main": "libs/whats-up-events/src/index.ts",
+        "tsConfig": "libs/whats-up-events/tsconfig.lib.json",
+        "assets": ["libs/whats-up-events/*.md"]
+      }
+    }
+  }
+}

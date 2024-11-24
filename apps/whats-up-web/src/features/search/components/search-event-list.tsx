@@ -1,5 +1,5 @@
 import { EventList, EventListProps } from '../../events/components/event-list';
-import { EventTag } from '../../events/types/event-tag';
+import { EventTag } from '@libs/whats-up-events';
 
 interface SearchEventListProps extends EventListProps {
   selectedTags: EventTag[];

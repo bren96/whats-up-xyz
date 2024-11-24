@@ -1,5 +1,5 @@
 import { ToggleGroupItem } from '@libs/shadcn-ui-web';
-import { EventTag } from '../../events/types/event-tag';
+import { EventTag } from '@libs/whats-up-events';
 
 type SearchCategoryProps = EventTag;
 

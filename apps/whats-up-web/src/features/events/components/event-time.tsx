@@ -1,5 +1,5 @@
 import { Clock } from 'lucide-react';
-import { Event } from '../types/event';
+import { Event } from '@libs/whats-up-events';
 
 interface EventTimeProps {
   event: Event;

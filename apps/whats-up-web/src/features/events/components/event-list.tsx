@@ -1,5 +1,5 @@
 import { EventCard } from './event-card';
-import { Event } from '../types/event';
+import { Event } from '@libs/whats-up-events';
 
 export interface EventListProps {
   events: Event[];

@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@libs/shadcn-ui-web';
-import { Event } from '../types/event';
+import { Event } from '@libs/whats-up-events';
 import { EventCategories } from './event-categories';
 import { EventLocation } from './event-location';
 import { EventTime } from './event-time';

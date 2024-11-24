@@ -1,7 +1,7 @@
 import { ToggleGroup } from '@libs/shadcn-ui-web';
 import { SearchCategory } from './search-category';
 import { ToggleGroupMultipleProps } from '@radix-ui/react-toggle-group';
-import { EventTag } from '../../events/types/event-tag';
+import { EventTag } from '@libs/whats-up-events';
 
 interface SearchCategoryListProps
   extends Omit<ToggleGroupMultipleProps, 'type'> {
