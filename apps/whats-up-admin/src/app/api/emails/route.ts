@@ -1,13 +1,27 @@
 import { prisma } from '@libs/whats-up-prisma';
+import { email } from '@prisma/client';
+import { NextRequest } from 'next/server';
 
-export function POST() {
+function validatePostRequest(object: any): object is email {
+  return (object as email) && typeof (object as email).rawText === 'string';
+}
+
+export async function POST(request: NextRequest) {
+  const body = await request.json();
+
+  if (!validatePostRequest(body)) {
+    return new Response('Invalid Data', { status: 400 });
+  }
+
   // create email in db
-  prisma.email.create({
+  const email = await prisma.email.create({
     data: {
-      rawText: 'Test 123',
+      rawText: body.rawText,
       status: 'IN_PROGRESS',
     },
   });
+
+  return new Response(JSON.stringify(email), { status: 201 });
 
   // create and run assistant thread
   // validate response
