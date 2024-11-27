@@ -1,6 +1,7 @@
 import { prisma } from '@libs/whats-up-prisma';
 import { email } from '@prisma/client';
 import { NextRequest } from 'next/server';
+import { createAndRunAssistantThread } from 'whats-up-assistants';
 
 function validatePostRequest(object: any): object is email {
   return (object as email) && typeof (object as email).rawText === 'string';
@@ -21,9 +22,19 @@ export async function POST(request: NextRequest) {
     },
   });
 
-  return new Response(JSON.stringify(email), { status: 201 });
+    // create and run assistant thread
+    createAndRunAssistantThread({
+      messages: [
+        {
+          role: 'user',
+          content: '...'
+        }
+      ]
+    })
+  
+  
+    // validate response
+    // create events in db
 
-  // create and run assistant thread
-  // validate response
-  // create events in db
+  return new Response(JSON.stringify(email), { status: 201 });
 }

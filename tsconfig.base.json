@@ -21,7 +21,8 @@
       "@libs/shadcn-ui-web": ["libs/shadcn-ui-web/src/index.ts"],
       "@libs/shadcn-ui-web/*": ["libs/shadcn-ui-web/src/*"],
       "@libs/whats-up-events": ["libs/whats-up-events/src/index.ts"],
-      "@libs/whats-up-prisma": ["libs/whats-up-prisma/src/index.ts"]
+      "@libs/whats-up-prisma": ["libs/whats-up-prisma/src/index.ts"],
+      "whats-up-assistants": ["libs/whats-up-assistants/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

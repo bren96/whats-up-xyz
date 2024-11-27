@@ -1,0 +1,19 @@
+{
+  "name": "whats-up-assistants",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/whats-up-assistants/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/whats-up-assistants",
+        "main": "libs/whats-up-assistants/src/index.ts",
+        "tsConfig": "libs/whats-up-assistants/tsconfig.lib.json",
+        "assets": ["libs/whats-up-assistants/*.md"]
+      }
+    }
+  }
+}
