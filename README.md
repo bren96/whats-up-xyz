@@ -17,7 +17,7 @@ npm install -g vercel
 
 Setup development environment variables:
 ```
-q
+vercel env pull
 ```
 
 
