@@ -7,18 +7,61 @@
   "targets": {
     "build": {
       "executor": "@nx/vite:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "dependsOn": [
+        "prisma-generate"
+      ],
       "options": {
         "outputPath": "dist/libs/whats-up-prisma",
         "main": "libs/whats-up-prisma/src/index.ts",
         "tsConfig": "libs/whats-up-prisma/tsconfig.lib.json",
-        "assets": ["libs/whats-up-prisma/*.md"]
+        "assets": [
+          "libs/whats-up-prisma/*.md"
+        ]
       }
     },
-    "generate": {
+    "prisma-generate": {
       "executor": "nx:run-commands",
       "options": {
         "command": "npx prisma generate --schema=libs/whats-up-prisma/prisma/schema.prisma"
+      }
+    },
+    "prisma-migrate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx prisma migrate dev --schema=libs/whats-up-prisma/prisma/schema.prisma"
+      }
+    },
+    "prisma-deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx prisma migrate deploy --schema=libs/whats-up-prisma/prisma/schema.prisma"
+      }
+    },
+    "prisma-studio": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx prisma studio --schema=libs/whats-up-prisma/prisma/schema.prisma"
+      }
+    },
+    "prisma-validate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx prisma validate --schema=libs/whats-up-prisma/prisma/schema.prisma"
+      }
+    },
+    "prisma-pull": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx prisma db pull --schema=libs/whats-up-prisma/prisma/schema.prisma"
+      }
+    },
+    "prisma-push": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx prisma db push --schema=libs/whats-up-prisma/prisma/schema.prisma"
       }
     }
   }
