@@ -4,15 +4,28 @@
   "sourceRoot": "libs/whats-up-events/src",
   "projectType": "library",
   "tags": [],
+  "implicitDependencies": [
+    "whats-up-prisma"
+  ],
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "dependsOn": [
+        {
+          "target": "prisma-generate",
+          "projects": "dependencies"
+        }
+      ],
       "options": {
         "outputPath": "dist/libs/whats-up-events",
         "main": "libs/whats-up-events/src/index.ts",
         "tsConfig": "libs/whats-up-events/tsconfig.lib.json",
-        "assets": ["libs/whats-up-events/*.md"]
+        "assets": [
+          "libs/whats-up-events/*.md"
+        ]
       }
     }
   }
