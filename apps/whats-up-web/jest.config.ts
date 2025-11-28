@@ -8,4 +8,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/apps/whats-up-web',
+  setupFilesAfterEnv: ['./specs/jest-prisma-client.ts'],
 };
