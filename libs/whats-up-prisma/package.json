@@ -1,7 +1,9 @@
 {
   "name": "whats-up-prisma",
   "version": "0.0.1",
-  "dependencies": {},
+  "dependencies": {
+    "@prisma/client": "^5.20.0"
+  },
   "main": "./index.js",
   "module": "./index.mjs",
   "typings": "./index.d.ts",
