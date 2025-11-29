@@ -2,6 +2,7 @@
   "name": "whats-up-events",
   "version": "0.0.1",
   "dependencies": {
+    "@prisma/client": "^5.20.0",
     "tslib": "^2.3.0"
   },
   "type": "commonjs",
